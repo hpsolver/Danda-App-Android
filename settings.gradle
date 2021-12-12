@@ -1,0 +1,1 @@
+include ':app', ':videocompressor', ':toro-player', ':toro-core', ':nocropper'/*, ':lib'*/

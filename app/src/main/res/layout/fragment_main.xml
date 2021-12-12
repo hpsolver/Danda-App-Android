@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserratmedium"
+                android:textSize="@dimen/_20sdp"
+               android:layout_marginStart="@dimen/_8sdp" />
+
+
+
+            <FrameLayout
+                android:id="@+id/frameLayoutChat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewChatList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingStart="@dimen/dp_six"
+                    android:paddingEnd="@dimen/dp_sixteen"
+                    android:src="@drawable/ic_icon_send" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUnreadCount"
+                    android:layout_width="@dimen/dp_sixteen"
+                    android:layout_height="@dimen/dp_sixteen"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="@dimen/dp_eight"
+                    android:layout_marginTop="@dimen/dp_eight"
+                    android:layout_marginRight="@dimen/dp_eight"
+                    android:background="@drawable/bubble"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+</layout>

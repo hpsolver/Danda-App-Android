@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@android:color/white">
+
+
+            <TextView
+                android:id="@+id/textViewSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_twelve"
+                android:layout_marginTop="@dimen/dp_eight"
+                android:layout_marginEnd="@dimen/dp_eight"
+                android:layout_marginBottom="@dimen/dp_eight"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_icon_black_search"
+                android:drawablePadding="@dimen/dp_four"
+                android:fontFamily="@font/montserratregular"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_sixteen" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_two">
+
+
+            <im.ene.toro.widget.Container
+                android:id="@+id/containerExplore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

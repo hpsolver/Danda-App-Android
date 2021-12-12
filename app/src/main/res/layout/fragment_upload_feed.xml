@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.UploadFeedViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/rootLayoutUpload"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_300"
+                    android:gravity="center"
+                    android:background="@android:color/black">
+
+                    <com.sammyekaran.danda.utils.BlurImageView
+                        android:id="@+id/imageViewPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:dominantMeasurement="height" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="false">
+
+
+                        <VideoView
+                            android:id="@+id/videoView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/imageButtonPlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:src="@drawable/ic_icon_play_button" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_eight"
+                    android:layout_marginTop="@dimen/dp_twelve"
+                    android:layout_marginRight="@dimen/dp_eight">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratregular"
+                        android:hint="@string/caption"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonUploadFeed"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="@dimen/dp_two_fourty"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_thirty_two"
+                    android:layout_marginBottom="@dimen/dp_sixteen"
+                    android:background="@drawable/button_effect"
+                    android:fontFamily="@font/montserratmedium"
+                    android:padding="@dimen/dp_twelve"
+                    android:text="@string/upload_to_feed"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:background="@color/white"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</layout>

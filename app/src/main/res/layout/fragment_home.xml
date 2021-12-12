@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayoutHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_thirty_two"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratmedium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/welcome_to_the_danda"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_twenty_four" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_twenty_four"
+                    android:fontFamily="@font/montserratregular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/please_follow_some_users_to_see_there_live_nfeeds_images_and_videos_uploaded"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_sixteen" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_sixteen"
+                    android:layout_marginBottom="@dimen/dp_four"
+                    android:fontFamily="@font/montserratmedium"
+                    android:text="@string/suggestion"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_sixteen" />
+            </LinearLayout>
+
+            <im.ene.toro.widget.Container
+                android:id="@+id/recyclerViewFeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayoutWelcome"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                android:id="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:mlpb_progress_color="@color/colorPrimary"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                app:mlpb_progress_stoke_width="@dimen/_2sdp" />
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

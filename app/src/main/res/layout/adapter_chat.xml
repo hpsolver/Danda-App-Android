@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMyMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingVertical="10dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/my_message"
+                android:elevation="@dimen/dp_two"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMyMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:linksClickable="true"
+                    android:padding="4dp"
+                    android:textColor="#fff"
+                    android:textColorLink="@color/colorBlue"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_11sdp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvMyTimeStamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/dp_four"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_7sdp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTheirMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingVertical="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="60dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/their_message"
+                android:elevation="@dimen/dp_two"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTheirMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:fontFamily="@font/montserratregular"
+                    android:linksClickable="true"
+                    android:padding="4dp"
+                    android:textColorLink="@color/colorBlue"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvTheirTimeStamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserratregular"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingRight="@dimen/dp_four"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:textSize="@dimen/_7sdp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
+
+

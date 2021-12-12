@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.SupportViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSupport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@android:color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{viewModel::back}"
+                android:paddingLeft="@dimen/dp_eight"
+                android:paddingRight="@dimen/dp_sixteen"
+                android:src="@drawable/ic_icon_back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_eight"
+                android:layout_toRightOf="@+id/imageViewBack"
+                android:fontFamily="@font/montserratmedium"
+                android:maxLines="1"
+                android:text="@string/support"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:onClick="@{viewModel::addTicket}"
+                android:padding="@dimen/dp_twelve"
+                android:paddingLeft="@dimen/dp_eight"
+                android:paddingRight="@dimen/dp_sixteen"
+                android:src="@drawable/ic_ions_add_black_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvStartConversation"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserratmedium"
+                android:text="@string/to_start_a_conversation_click_on_the_sign_above"
+                android:textSize="@dimen/sp_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTickets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

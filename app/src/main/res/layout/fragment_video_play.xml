@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".view.fragment.VideoPlayFragment">
+    <data>
+    </data>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:id="@+id/rootLayoutVideoPlay"
+                    android:layout_height="match_parent">
+        <VideoView
+                android:id="@+id/videoView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/dp_two_fourty"
+                android:padding="@dimen/dp_twelve"
+                android:text="@string/bt_done"
+                android:textAllCaps="false"
+                android:background="@drawable/button_effect"
+                android:id="@+id/buttonDone"
+                android:layout_marginBottom="@dimen/dp_sixteen"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/montserratmedium"
+                android:layout_marginTop="@dimen/dp_thirty_two"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</layout>

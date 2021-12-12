@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.PostDetailViewModel"/>
+        <variable name="comment" type="com.sammyekaran.danda.model.postdetail.Comment"/>
+    </data>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:onClick="@{(v)->viewModel.getProfile(v,comment.userId)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:padding="@dimen/dp_four"
+                      android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                    app:civ_border_color="@color/colorPrimary"
+                    android:src="@drawable/ic_icon_avatar"
+                    app:imageFromUrl="@{comment.profilePic}"
+                    android:layout_width="@dimen/dp_thirty_two"
+                    android:layout_height="@dimen/dp_thirty_two"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:padding="@dimen/dp_four"
+                      android:gravity="center_vertical"
+                      android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/tvComment"
+                    android:layout_marginLeft="@dimen/dp_four"
+                    android:fontFamily="@font/montserratregular"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

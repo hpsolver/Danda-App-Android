@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownView">
+        <attr name="startDuration" format="integer" />
+        <attr name="android:textSize" />
+        <attr name="android:textAppearance" />
+    </declare-styleable>
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="aspectRatio" format="float" />
+        <attr name="aspectRatioEnabled" format="boolean" />
+        <attr name="dominantMeasurement">
+            <enum name="width" value="0" />
+            <enum name="height" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BlurImageView">
+        <attr name="radius" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="HeartsView">
+        <attr name="x_max" format="float" />
+        <attr name="size_coeff" format="float" />
+        <attr name="floating_time_coeff" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SurfaceView">
+        <attr name="frameRate" />
+        <attr name="renderMode" />
+        <attr name="antiAliasingType"/>
+        <attr name="isTransparent" />
+        <attr name="bitsRed" />
+        <attr name="bitsGreen" />
+        <attr name="bitsBlue" />
+        <attr name="bitsAlpha"/>
+        <attr name="bitsDepth" />
+        <attr name="multiSampleCount" />
+    </declare-styleable>
+
+    <declare-styleable name="TextureView">
+        <attr name="frameRate" />
+        <attr name="renderMode" />
+        <attr name="antiAliasingType" />
+        <attr name="bitsRed"/>
+        <attr name="bitsGreen"/>
+        <attr name="bitsBlue"/>
+        <attr name="bitsAlpha" />
+        <attr name="bitsDepth"/>
+        <attr name="multiSampleCount"/>
+    </declare-styleable>
+
+    <attr name="frameRate" format="float" />
+    <attr name="isTransparent" format="boolean" />
+    <attr name="bitsRed" format="integer" />
+    <attr name="bitsGreen" format="integer" />
+    <attr name="bitsBlue" format="integer" />
+    <attr name="bitsAlpha" format="integer" />
+    <attr name="bitsDepth" format="integer" />
+    <attr name="multiSampleCount" format="integer" />
+
+    <attr name="antiAliasingType" format="enum">
+        <enum name="multisample" value="1"/>
+        <enum name="coverage" value="2"/>
+    </attr>
+    <attr name="renderMode" format="enum">
+        <enum name="RENDER_WHEN_DIRTY" value="0" />
+        <enum name="RENDER_CONTINUOUS" value="1" />
+    </attr>
+</resources>

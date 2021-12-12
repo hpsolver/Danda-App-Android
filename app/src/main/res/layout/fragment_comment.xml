@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.CommentViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rootLayoutComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/header_color">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{viewModel::onBackClick}"
+                android:paddingLeft="@dimen/dp_eight"
+                android:paddingRight="@dimen/dp_sixteen"
+                android:src="@drawable/ic_icon_back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp_eight"
+                android:layout_marginBottom="@dimen/dp_eight"
+                android:fontFamily="@font/montserratmedium"
+                android:text="@string/back"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomLayout"
+            android:layout_below="@+id/linearLayoutHeader">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSuggestion"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_above="@+id/bottomLayout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/dp_four"
+                android:layout_marginRight="@dimen/dp_four"
+                android:layout_toLeftOf="@+id/textViewPost"
+                android:background="@drawable/rounded_color_primary"
+                android:hint="@string/write_a_comment"
+                android:padding="@dimen/dp_eight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserratmedium"
+                android:padding="@dimen/dp_eight"
+                android:text="@string/post"
+                android:textColor="@color/colorBlue" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

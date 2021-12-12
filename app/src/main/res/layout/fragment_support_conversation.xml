@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.SupportViewModel"/>
+    </data>
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/relativeLayoutRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <include layout="@layout/header_layout"
+                 android:id="@+id/header"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSupportConversation"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/header"
+                android:layout_above="@+id/bottomLayout"
+                android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="?actionBarSize"
+                android:id="@+id/bottomLayout">
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/dp_four"
+                    android:id="@+id/editTextComment"
+                    android:layout_marginRight="@dimen/dp_four"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/write_a_comment"
+                    android:padding="@dimen/dp_eight"
+                    android:background="@drawable/rounded_color_primary"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/textViewPost"
+                    android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewPost"
+                    android:text="@string/post"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlue"
+                    android:padding="@dimen/dp_eight"
+                    android:fontFamily="@font/montserratmedium"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.FollowUnfollowViewModel"/>
+        <variable name="user" type="com.sammyekaran.danda.model.followlist.Detail"/>
+    </data>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_four"
+            android:onClick="@{(v)->viewModel.getProfile(v,user.userId)}"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_weight=".18"
+                      android:padding="@dimen/dp_four"
+                      android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/ic_icon_avatar"
+                    app:imageFromUrl="@{user.profilePic}"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_weight=".47"
+                      android:orientation="vertical"
+                      android:padding="@dimen/dp_four"
+                      android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:text="@{user.username}"
+                    android:fontFamily="@font/montserratmedium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:maxLines="1"
+                android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:text="@{user.fullname}"
+                    android:maxLines="1"
+                android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/montserratregular"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:padding="@dimen/dp_four"
+                      android:layout_weight=".35"
+                      android:gravity="center_vertical"
+                      android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/dp_eight"
+                    app:bindText="@{user.usersType}"
+                    android:onClick="@{(v)->viewModel.follow(v,user)}"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_four"
+                android:textSize="@dimen/_11sdp"
+                    android:paddingBottom="@dimen/dp_four"
+                    android:fontFamily="@font/montserratmedium"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

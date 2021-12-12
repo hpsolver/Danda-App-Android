@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.HomeViewModel"/>
+        <variable name="suggestion" type="com.sammyekaran.danda.model.homefeed.Suggestion"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/dp_four"
+            android:onClick="@{(v)->viewModel.viewProfile(v,suggestion.userId)}"
+            android:gravity="center_vertical"
+            app:cardElevation="@dimen/dp_two"
+            app:cardCornerRadius="@dimen/dp_eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:padding="@dimen/dp_sixteen"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_icon_avatar"
+                    app:imageFromUrl="@{suggestion.profilePic}"
+                    android:layout_width="@dimen/dp_seventy_two"
+                    android:layout_height="@dimen/dp_seventy_two"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:fontFamily="@font/montserratregular"
+                    android:maxLines="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_eight"
+                    android:text="@{suggestion.username}"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFollowUnfollow"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="@dimen/dp_eight"
+                    app:bindText="@{suggestion.userType}"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/dp_eight"
+                    android:paddingLeft="@dimen/dp_eight"
+                    android:background="@drawable/button_effect"
+                    android:paddingTop="@dimen/dp_four"
+                    android:paddingBottom="@dimen/dp_four"
+                    android:fontFamily="@font/montserratmedium"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

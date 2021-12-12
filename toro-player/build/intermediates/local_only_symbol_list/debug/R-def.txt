@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+dimen toro_media_button_height
+dimen toro_media_button_width
+drawable ic_icon_play_button
+drawable ic_volume_off_black_24dp
+drawable ic_volume_up_black_24dp
+id exo_volume_off
+id exo_volume_up
+id imageViewArt
+id volume_bar
+layout toro_exo_control_view
+layout toro_exo_player_view
+string enable_random_adaptation
+string error_drm_not_supported
+string error_drm_unknown
+string error_drm_unsupported_scheme
+string error_instantiating_decoder
+string error_no_decoder
+string error_no_secure_decoder
+string error_querying_decoders
+string error_unsupported_audio
+string error_unsupported_video
+string exo_controls_volume_off_description
+string exo_controls_volume_up_description
+string sample_list_load_error
+string storage_permission_denied
+string unexpected_intent_action
+style ToroMediaButton
+style ToroMediaButton.Pause
+style ToroMediaButton.Play
+style ToroMediaButton.VolumeOff
+style ToroMediaButton.VolumeUp

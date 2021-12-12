@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rlShared"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_eight"
+        android:layout_marginTop="@dimen/dp_eight">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivSharedProfile"
+            android:layout_width="@dimen/dp_thirty_two"
+            android:layout_height="@dimen/dp_thirty_two"
+            android:src="@drawable/ic_icon_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSharedUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_four"
+            android:layout_toStartOf="@+id/ibSharedMore"
+            android:layout_toRightOf="@+id/ivSharedProfile"
+            android:fontFamily="@font/montserratmedium"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageButton
+            android:id="@+id/ibSharedMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp_four"
+            android:src="@drawable/ic_icon_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_eight"
+        android:layout_marginTop="@dimen/dp_eight">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewPostProfile"
+            android:layout_width="@dimen/dp_thirty_two"
+            android:layout_height="@dimen/dp_thirty_two"
+            android:src="@drawable/ic_icon_avatar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_four"
+            android:layout_toLeftOf="@+id/ibMore"
+            android:layout_toRightOf="@+id/imageViewPostProfile"
+            android:fontFamily="@font/montserratmedium"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageButton
+            android:id="@+id/ibMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:padding="@dimen/dp_four"
+            android:src="@drawable/ic_icon_more" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_four"
+        android:background="@color/transparent">
+
+
+        <com.sammyekaran.danda.utils.BlurImageView
+            android:id="@+id/imageViewHomePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/mediaContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_280"
+            android:gravity="center"
+            android:scaleType="center">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:player_layout_id="@layout/toro_exo_player_view"
+                app:resize_mode="fixed_height"
+                app:surface_type="texture_view"
+                app:use_artwork="true"
+                app:use_controller="true" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imageButtonPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/ic_icon_play_button"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_four">
+
+        <ImageView
+            android:id="@+id/imageViewLike"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_icon_like" />
+
+        <ImageView
+            android:id="@+id/imageViewComment"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingRight="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:src="@drawable/ic_icon_comment" />
+
+        <ImageView
+            android:id="@+id/imageViewDownload"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingRight="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:src="@drawable/ic_download" />
+
+        <ImageView
+            android:id="@+id/imageViewShare"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingRight="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:src="@drawable/ic_forward" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_twelve"
+            android:layout_marginTop="@dimen/dp_four"
+            android:fontFamily="@font/montserratmedium"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_twelve"
+            android:layout_marginTop="@dimen/dp_four"
+            android:fontFamily="@font/montserratmedium"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_four"
+            android:layout_marginTop="@dimen/dp_four"
+            android:fontFamily="@font/montserratregular"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvViewAllComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_twelve"
+        android:fontFamily="@font/montserratregular"
+
+        android:paddingTop="@dimen/dp_four"
+        android:text="View all comments"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_11" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_eight">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewMyProfile"
+            android:layout_width="@dimen/dp_twenty_four"
+            android:layout_height="@dimen/dp_twenty_four"
+            android:src="@drawable/ic_icon_avatar" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editTextComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_four"
+            android:layout_toLeftOf="@+id/textViewPost"
+            android:layout_toRightOf="@+id/imageViewMyProfile"
+            android:background="@null"
+            android:fontFamily="@font/montserratmedium"
+            android:hint="@string/add_a_comment"
+            android:inputType="text"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/textViewPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/montserratmedium"
+            android:text="@string/post"
+            android:textColor="@color/colorBlue"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSuggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratmedium"
+        android:text="@string/suggestion"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/sp_sixteen"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSuggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

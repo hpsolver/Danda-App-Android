@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+    <TextView
+            android:text="INDIA"
+            android:padding="@dimen/dp_eight"
+            android:textSize="@dimen/sp_sixteen"
+            android:fontFamily="@font/montserratmedium"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_eight"
+         android:fontFamily="@font/montserratregular"
+            android:text="+91"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_thirteen"
+            android:id="@+id/textViewCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <View
+            android:layout_below="@+id/textViewCode"
+            android:background="@color/colorLightGrey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+</RelativeLayout>

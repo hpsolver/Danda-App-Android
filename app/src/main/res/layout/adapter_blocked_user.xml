@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+      <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.BlockedViewModel"/>
+        <variable name="data" type="com.sammyekaran.danda.model.blockuserlist.DataItem"/>
+    </data>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="@dimen/dp_six"
+            android:onClick="@{(v)->viewModel.getProfile(v,data.user_id)}"
+            android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                imageFromUrl="@{data.profile_pic}"
+                android:src="@drawable/ic_icon_avatar"
+                android:layout_width="@dimen/dp_fifty_six"
+                android:layout_height="@dimen/dp_fifty_six"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_gravity="center"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="@dimen/dp_four"
+                      android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content"
+                      android:fontFamily="@font/montserratmedium"
+                      android:text="@{data.username}"
+                      android:textColor="@color/colorPrimaryDark"
+                      android:layout_height="wrap_content"
+                      android:maxLines="1"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="@{data.fullname}"
+                      android:fontFamily="@font/montserratregular"
+                      android:textColor="@color/colorPrimaryDark"
+                      android:layout_height="wrap_content"
+                      android:maxLines="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

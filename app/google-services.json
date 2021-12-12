@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "824652359736",
+    "firebase_url": "https://danda-89b99.firebaseio.com",
+    "project_id": "danda-89b99",
+    "storage_bucket": "danda-89b99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824652359736:android:22449dd20175cdaabedecd",
+        "android_client_info": {
+          "package_name": "com.sammyekaran.danda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824652359736-5kegqilj41v5k0qlu4oq41uu94m6h37l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sammyekaran.danda",
+            "certificate_hash": "1a7cda5e86a358c6e9d8f9b488da62381aa7b900"
+          }
+        },
+        {
+          "client_id": "824652359736-qe7vak76faoua61fvo0t4r402jjf6ek2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sammyekaran.danda",
+            "certificate_hash": "8910add65273db407cbecc89c498ec1e1dcc03a3"
+          }
+        },
+        {
+          "client_id": "824652359736-0s4s3tj2t5kf69td7o2qbese4csca0pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8ou8igvtppsJNL0ZI6kDB5SJ6yoaPVmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824652359736-0s4s3tj2t5kf69td7o2qbese4csca0pf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

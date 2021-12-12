@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.SupportViewModel" />
+
+        <variable
+            name="data"
+            type="com.sammyekaran.danda.model.fetchsupportchat.DataItem" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llreciverView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_four">
+
+
+            <TextView
+                android:id="@+id/textViewReceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratregular"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textColor="#90000000" />
+
+
+            <TextView
+                android:id="@+id/textViewRecivedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratmedium"
+                android:gravity="end"
+                android:textColor="#90000000"
+                android:textSize="@dimen/sp_11" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llsenderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llreciverView"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_four">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textViewSendTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserratmedium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_11" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</layout>

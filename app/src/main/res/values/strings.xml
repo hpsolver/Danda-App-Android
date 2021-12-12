@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Danda</string>
+    <string name="str_email">Email</string>
+    <string name="str_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="str_name">Name</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="submit">Submit</string>
+    <string name="forgot_password_link">OTP will be sent on the \n mentiond Phone</string>
+    <string name="str_phone_number">Phone number</string>
+    <string name="home">Home</string>
+    <string name="str_search">Search</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="post">Post</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="support">Support</string>
+    <string name="invite_a_friend">Invite a Friend</string>
+    <string name="change_password">Change Password</string>
+    <string name="buy_premium">Buy Premium</string>
+    <string name="logout">Logout</string>
+    <string name="follow">Follow</string>
+    <string name="select_video">Select Video</string>
+    <string name="get_live_now">Go Live Now</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="photo_library">Photo Library</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="countries">Countries</string>
+    <string name="cancel">Cancel</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="user_name">Username</string>
+    <string name="website">Website</string>
+    <string name="bio">Bio</string>
+    <string name="paypal_id">Paypal Id</string>
+    <string name="email_address">Email address</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="detail">Detail</string>
+    <string name="search">Search</string>
+    <string name="discard">Discard</string>
+    <string name="crop">Crop</string>
+
+
+    <!-- CreateTransactionActivity -->
+    <string name="processing_transaction">Processing Transaction</string>
+    <string name="transaction_failed">Transaction Failed</string>
+    <string name="transaction_complete">Transaction Complete</string>
+    <string name="message">Message</string>
+    <string name="amount_in_usd">Amount (in USD)</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="welcome_to_the_danda">Welcome to the Danda</string>
+    <string name="please_follow_some_users_to_see_there_live_nfeeds_images_and_videos_uploaded">Please follow some users
+        to see there live\nfeeds, images and videos uploaded.
+    </string>
+    <string name="back">Back</string>
+    <string name="write_a_comment">Write a comment....</string>
+    <string name="select">Select</string>
+    <string name="upload_feed">Upload Feed</string>
+    <string name="title">Title</string>
+    <string name="is_this_explicit_content">Is this Exclusive content</string>
+    <string name="upload_to_feed">Upload To Feed</string>
+    <string name="send">Send</string>
+    <string name="driect">Direct</string>
+    <string name="setting">Settings</string>
+    <string name="go_live">Go Live</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="enter_old_password">Enter Old Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="send_to">Send to</string>
+    <string name="comment">Comment</string>
+    <string name="copy_profile_url">Copy Profile Url</string>
+    <string name="str_unfollow">Unfollow</string>
+    <string name="block">Block</string>
+    <string name="report">Report</string>
+    <string name="viewstatus">View Status</string>
+    <string name="choose_a_reason_for_reporting_this_post">Choose a reason for reporting this post :</string>
+    <string name="blocked_user">Blocked Accounts</string>
+    <string name="delete_post">Delete Post</string>
+    <string name="copy_post_url">Copy Post Url</string>
+    <string name="bt_done">Done</string>
+    <string name="thanks_for_watching">Thanks for watching !</string>
+    <string name="live">Live</string>
+    <string name="no_internet">No Internet Connection !</string>
+    <string name="offline">Ofline</string>
+    <string name="online">Online</string>
+    <string name="str_99_plus">99+</string>
+    <string name="upgrade_text">Please upgrade to premium\nmembership to see this content.</string>
+    <string name="alert">Alert</string>
+    <string name="upload_images">Please upload some videos or images.</string>
+    <string name="error_no_images">There are no images or videos \nuploaded by the user.</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="enter_your_code">Enter your code</string>
+    <string name="enter_code">Enter code</string>
+    <string name="verify">Verify</string>
+    <string name="can_t_receive_sms">Can\'t receive SMS?</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="phone_verification">Phone Verification</string>
+    <string name="code_sent_successfully">Code sent successfully.</string>
+    <string name="verifying">Verifying...</string>
+    <string name="email_or_phone">Email or Phone</string>
+    <string name="str_explore">Explore</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="set_password">Set Password</string>
+    <string name="what_you_want">What you want to show when some one like your post ?</string>
+    <string name="next">Next</string>
+    <string name="gallery">Gallery</string>
+    <string name="photo">Photo</string>
+    <string name="upload">Upload</string>
+    <string name="no_messages_yet">No messages yet.</string>
+
+    <string name="caption">Caption</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="please_enter_verifivation_code">"Please enter verification code\nsent to "</string>
+
+
+    <string name="facebook_app_id">339394307364082</string>
+    <string name="fb_login_protocol_scheme">fb339394307364082</string>
+    <string name="capture_video">Capture Video</string>
+    <string name="select_gif">Select Gif</string>
+    <string name="gif">GIF</string>
+    <string name="images">IMAGES</string>
+    <string name="trending">Trending</string>
+    <string name="no_blocked_contacts_yet">No blocked contacts yet</string>
+    <string name="to_start_a_conversation_click_on_the_sign_above">To start a conversation click on the + sign above</string>
+    <string name="app_name_small">danda</string>
+    <string name="admob_app_id">ca-app-pub-7362275312335019~5698728240</string>
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+<!--
+    <string name="ad_unit_id">ca-app-pub-7362275312335019/7103965794</string>
+-->
+
+</resources>

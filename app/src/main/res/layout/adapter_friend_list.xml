@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="friend"
+            type="com.sammyekaran.danda.model.friendList.UserDetail" />
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.FriendsViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:onClick="@{(v)->viewModel.navigateToChat(v,friend.userId,friend.fcmToken,friend.userName)}"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_two">
+
+            <RelativeLayout
+                android:id="@+id/rlProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    imageFromUrl="@{friend.pic}"
+                    android:layout_width="@dimen/dp_fourty_eight"
+                    android:layout_height="@dimen/dp_fourty_eight"
+                    android:src="@drawable/ic_icon_avatar"
+                    app:civ_border_color="@color/colorPrimary" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_twelve"
+                    android:layout_height="@dimen/dp_twelve"
+                    android:layout_marginTop="@dimen/dp_four"
+                    android:background="@drawable/green_bubble"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rlProfile"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_four">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratmedium"
+                    android:maxLines="1"
+                    android:text="@{friend.userName}"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserratregular"
+                    android:maxLines="1"
+                    android:text="@{friend.fullName}"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCount"
+                android:layout_width="@dimen/dp_sixteen"
+                android:layout_height="@dimen/dp_sixteen"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:layout_marginLeft="@dimen/dp_eight"
+                android:layout_marginTop="@dimen/dp_eight"
+                android:layout_marginRight="@dimen/dp_eight"
+                android:background="@drawable/bubble"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_one"
+            android:layout_marginLeft="@dimen/dp_fifty_six"
+            android:background="@color/colorLightGrey" />
+
+
+    </LinearLayout>
+</layout>

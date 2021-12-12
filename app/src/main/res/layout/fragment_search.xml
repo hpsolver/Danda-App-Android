@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.SearchViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativeLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/header_color">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imageButtonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingLeft="@dimen/dp_eight"
+                android:paddingRight="@dimen/dp_sixteen"
+                android:src="@drawable/ic_icon_back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp_eight"
+                android:layout_marginEnd="@dimen/dp_eight"
+                android:layout_marginBottom="@dimen/dp_eight"
+                android:layout_toEndOf="@+id/imageButtonBack"
+                android:background="@null"
+                android:drawablePadding="@dimen/dp_four"
+                android:fontFamily="@font/montserratregular"
+                android:hint="@string/search"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_sixteen" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swapRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                app:mlpb_progress_color="@color/colorPrimary"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                app:mlpb_progress_stoke_width="@dimen/_2sdp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

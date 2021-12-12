@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="@dimen/dp_eight"
+            android:layout_height="wrap_content">
+
+        <TextView android:layout_width="match_parent"
+                  android:text="@string/copy_post_url"
+                  android:padding="@dimen/dp_eight"
+                  android:id="@+id/textViewCopyUrls"
+                  android:textSize="@dimen/sp_sixteen"
+                  android:fontFamily="@font/montserratmedium"
+                  android:textColor="@color/colorPrimaryDark"
+                  android:layout_height="wrap_content"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:text="@string/report"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textViewReport"
+                  android:textSize="@dimen/sp_sixteen"
+                  android:padding="@dimen/dp_eight"
+                  android:fontFamily="@font/montserratmedium"
+                  android:textColor="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+</LinearLayout>

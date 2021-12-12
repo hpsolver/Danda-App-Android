@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.ReportViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_four"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include layout="@layout/header_layout"></include>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:padding="@dimen/dp_four"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserratbold"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvDetail"
+                android:layout_marginTop="@dimen/dp_eight"
+                android:padding="@dimen/dp_eight"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserratregular"
+                android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/dp_two_fourty"
+                android:padding="@dimen/dp_twelve"
+                android:text="@string/report"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_black"
+                android:id="@+id/buttonReport"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/montserratmedium"
+                android:layout_marginTop="@dimen/dp_thirty_two"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:text="Block the user if you dont want them to see photos or video uploaded by you."
+                android:layout_marginTop="@dimen/dp_thirty_two"
+                android:padding="@dimen/dp_eight"
+                android:fontFamily="@font/montserratregular"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/dp_two_fourty"
+                android:padding="@dimen/dp_twelve"
+                android:text="@string/block"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_blank"
+                android:id="@+id/buttonBlock"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserratmedium"
+                android:layout_marginTop="@dimen/dp_thirty_two"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>

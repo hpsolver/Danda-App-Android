@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="viewModel" type="com.sammyekaran.danda.viewmodel.StartActivityViewModel"/>
+    </data>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:layout_margin="@dimen/dp_eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dp_eight">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textViewTakePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_twelve"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="@string/take_photo"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/sp_sixteen"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorLightGrey"/>
+
+            <TextView
+                    android:id="@+id/textViewGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_twelve"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="@string/photo_library"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/sp_sixteen"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorLightGrey"/>
+
+            <TextView
+                    android:id="@+id/textViewVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_twelve"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="@string/select_video"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/sp_sixteen"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorLightGrey"/>
+
+            <TextView
+                    android:id="@+id/textViewCaptureVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_twelve"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="@string/capture_video"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/sp_sixteen"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_marginLeft="@dimen/dp_eight"
+            android:layout_marginRight="@dimen/dp_eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dp_eight">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:fontFamily="@font/montserratmedium"
+                    android:id="@+id/textViewCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:padding="@dimen/dp_twelve"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="@dimen/sp_eighteen"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

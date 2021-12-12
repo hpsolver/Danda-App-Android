@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.SearchViewModel" />
+        <variable
+            name="data"
+            type="com.sammyekaran.danda.model.exploreDataResponse.Datum" />
+    </data>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_120"
+                android:layout_margin="@dimen/dp_2"
+                android:background="@color/colorPrimaryDark">
+
+
+
+                <ImageView
+                    android:id="@+id/imageViewExplorePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <FrameLayout
+                    android:id="@+id/mediaContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:scaleType="center">
+
+                    <com.google.android.exoplayer2.ui.PlayerView
+                        android:id="@+id/playerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:player_layout_id="@layout/toro_exo_player_view"
+                        app:resize_mode="fixed_height"
+                        app:surface_type="texture_view"
+                        app:use_artwork="true"
+                        app:use_controller="true" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/imageButtonPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:src="@drawable/ic_icon_play_button"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutBulr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+</layout>

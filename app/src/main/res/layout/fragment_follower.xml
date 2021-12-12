@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.FollowUnfollowViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rootLayoutFollower"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgorund_line"
+            android:fontFamily="@font/montserratregular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_sixteen"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search here.." />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_42sdp"
+                app:mlpb_progress_color="@color/colorPrimary"
+                android:layout_height="@dimen/_42sdp"
+                app:mlpb_progress_stoke_width="@dimen/_2sdp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

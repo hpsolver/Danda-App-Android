@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF8E00</color>
+    <color name="colorPrimaryDark">#FF3800</color>
+    <color name="colorAccent">#FF3800</color>
+    <color name="colorBlue">#3897F0</color>
+    <color name="colorLightGrey">#50979797</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#000000</color>
+    <color name="header_color">#F8F8F8</color>
+    <color name="green">#23C448</color>
+    <color name="orange_red">#FF5F00</color>
+    <color name="textview_orange">#FF3800</color>
+    <color name="orange_red_light">#FF8E00</color>
+
+</resources>

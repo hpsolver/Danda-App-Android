@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+    <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:elevation="@dimen/dp_eight"
+                      android:layout_height="match_parent"
+                      android:background="@color/white">
+            <RelativeLayout
+                    android:background="@color/header_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize">
+
+                <ImageButton android:layout_width="wrap_content"
+                             android:background="@null"
+                             android:id="@+id/imageButtonBack"
+                             android:paddingLeft="@dimen/dp_eight"
+                             android:paddingRight="@dimen/dp_eight"
+                             android:src="@drawable/ic_icon_back_arrow"
+                             android:layout_height="match_parent"/>
+                <TextView
+                        android:fontFamily="@font/montserratmedium"
+                        android:layout_centerInParent="true"
+                    android:textSize="@dimen/_12sdp"
+                        android:text="@string/countries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginLeft="@dimen/dp_four"
+                    android:layout_marginRight="@dimen/dp_four"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextSearch"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/montserratregular"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/search"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <View
+                    android:layout_marginTop="@dimen/dp_eight"
+                    android:background="@color/colorLightGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></View>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_marginLeft="@dimen/dp_sixteen"
+                    android:layout_marginRight="@dimen/dp_sixteen"
+                    android:layout_marginTop="@dimen/dp_eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

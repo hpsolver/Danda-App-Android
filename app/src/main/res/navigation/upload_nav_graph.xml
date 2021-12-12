@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/upload_nav_graph"
+            app:startDestination="@id/uploadFeedFragment">
+
+    <fragment android:id="@+id/videoPlayFragment" android:name="com.sammyekaran.danda.view.fragment.VideoPlayFragment"
+              android:label="fragment_video_play" tools:layout="@layout/fragment_video_play">
+        <argument
+                android:name="path"
+                app:argType="string"
+                android:defaultValue="0"/>
+        <action android:id="@+id/action_videoPlayFragment_to_uploadFeedFragment"
+                app:destination="@id/uploadFeedFragment">
+            <argument
+                    android:name="path"
+                    app:argType="string"
+                    android:defaultValue="0"/>
+            <argument
+                    android:name="type"
+                    app:argType="string"
+                    android:defaultValue="I"/>
+        </action>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/uploadFeedFragment"
+              android:name="com.sammyekaran.danda.view.fragment.UploadFeedFragment"
+              android:label="UploadFeedFragment">
+        <argument
+                android:name="path"
+                app:argType="string"
+                android:defaultValue="0"/>
+        <argument
+                android:name="type"
+                app:argType="string"
+                android:defaultValue="0"/>
+    </fragment>
+</navigation>

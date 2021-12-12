@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sammyekaran.danda.viewmodel.PostDetailViewModel" />
+
+        <variable
+            name="post"
+            type="com.sammyekaran.danda.model.postdetail.Data" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/rootLayoutDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/header_color">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{viewModel::back}"
+                android:paddingLeft="@dimen/dp_eight"
+                android:paddingRight="@dimen/dp_sixteen"
+                android:src="@drawable/ic_icon_back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp_eight"
+                android:layout_marginBottom="@dimen/dp_eight"
+                android:layout_toRightOf="@+id/imageViewBack"
+                android:fontFamily="@font/montserratmedium"
+                android:text="@string/detail"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/dp_eight"
+                android:paddingRight="@dimen/dp_sixteen"
+                android:src="@drawable/ic_icon_more" />
+
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_eight"
+                    android:onClick="@{(v)->viewModel.getProfile(v,post.userId)}">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dp_thirty_two"
+                        android:layout_height="@dimen/dp_thirty_two"
+                        android:src="@drawable/ic_icon_avatar"
+                        app:imageFromUrl="@{post.profilePic}" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_four"
+                        android:fontFamily="@font/montserratmedium"
+                        android:text="@{post.username}"
+                        android:textColor="@color/colorPrimaryDark" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark">
+
+                    <com.sammyekaran.danda.utils.BlurImageView
+                        android:id="@+id/imageViewPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+
+                    <FrameLayout
+                        android:id="@+id/videoViewContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_280"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:scaleType="center">
+
+                        <com.sammyekaran.danda.view.ZoomableExoPlayerView
+                            android:id="@+id/zoomPlayerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:surface_type="texture_view"
+                            app:resize_mode="zoom"
+                            app:use_controller="false" />
+
+
+                        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            app:mlpb_progress_color="@color/colorPrimary"
+                            android:layout_width="@dimen/_42sdp"
+                            android:layout_height="@dimen/_42sdp"
+                            app:mlpb_progress_stoke_width="@dimen/_2sdp" />
+                    </FrameLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_icon_play_button"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llControll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_twelve"
+                        android:layout_marginTop="@dimen/dp_eight">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewLike"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_icon_like" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:onClick="@{(v)->viewModel.comment(v,post.postId)}"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_icon_comment" />
+
+
+                        <ImageView
+                            android:id="@+id/imageViewDownload"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:paddingRight="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_4sdp"
+                            android:src="@drawable/ic_download" />
+
+                        <ImageView
+                            android:id="@+id/imageViewShare"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_28sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:paddingRight="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_4sdp"
+                            android:src="@drawable/ic_forward" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewLikes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_twelve"
+                            android:fontFamily="@font/montserratmedium"
+                            android:maxLines="1"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_twelve"
+                            android:layout_marginTop="@dimen/dp_four"
+                            android:fontFamily="@font/montserratmedium"
+                            android:maxLines="1"
+                            android:text="@{post.username}"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_four"
+                            android:layout_marginTop="@dimen/dp_four"
+                            android:fontFamily="@font/montserratregular"
+                            android:maxLines="1"
+                            android:text="@{post.caption}"
+                            android:textColor="@color/colorPrimaryDark" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_twelve"
+                        android:fontFamily="@font/montserratregular"
+                        android:onClick="@{(v)->viewModel.comment(v,post.postId)}"
+                        android:text="View all comments"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_11" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_eight">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageViewMyProfile"
+                            android:layout_width="@dimen/dp_twenty_four"
+                            android:layout_height="@dimen/dp_twenty_four"
+                            android:src="@drawable/ic_icon_avatar"
+                            app:imageFromUrl="@{post.followerprofile}" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/editTextComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp_four"
+                            android:layout_toLeftOf="@+id/textViewPost"
+                            android:layout_toRightOf="@+id/imageViewMyProfile"
+                            android:background="@null"
+                            android:fontFamily="@font/montserratmedium"
+                            android:hint="@string/add_a_comment"
+                            android:inputType="text"
+                            android:textSize="@dimen/sp_11" />
+
+                        <TextView
+                            android:id="@+id/textViewPost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/montserratmedium"
+                            android:text="@string/post"
+                            android:textColor="@color/colorBlue"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_twelve">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        >
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+     <variable name="viewModel"
+               type="com.sammyekaran.danda.viewmodel.SettingViewModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:id="@+id/rootLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent"
+                        android:background="@android:color/white"
+                        android:layout_height="?actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/dp_eight"
+                    android:paddingRight="@dimen/dp_sixteen"
+                    android:onClick="@{viewModel::back}"
+                    android:src="@drawable/ic_icon_back_arrow"
+                    android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:maxLines="1"
+                    android:layout_toRightOf="@+id/imageViewBack"
+                    android:textSize="@dimen/sp_sixteen"
+                    android:fontFamily="@font/montserratmedium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_margin="@dimen/dp_eight"
+                    android:text="Profile"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:fillViewport="true">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/dp_thirty_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:onClick="@{viewModel::blocked}"
+                            android:id="@+id/relativeLayoutBlock"
+                            android:padding="@dimen/dp_eight"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageViewBlock"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:src="@drawable/ic_icon_block"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewBlock"
+                                android:fontFamily="@font/montserratmedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_margin="@dimen/dp_eight"
+                                android:text="@string/blocked_user"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_icon_right_arrow"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/dp_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                       android:id="@+id/relativeLayoutInvite"
+                            android:padding="@dimen/dp_eight"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageViewInvite"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:src="@drawable/ic_icon_invite"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewInvite"
+                                android:fontFamily="@font/montserratmedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_margin="@dimen/dp_eight"
+                                android:text="@string/invite_a_friend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_icon_right_arrow"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/dp_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:onClick="@{viewModel::support}"
+                            android:padding="@dimen/dp_eight"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageViewSupport"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:src="@drawable/ic_icon_support"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewSupport"
+                                android:fontFamily="@font/montserratmedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_margin="@dimen/dp_eight"
+                                android:text="@string/support"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_icon_right_arrow"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/dp_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:onClick="@{viewModel::changePassword}"
+                            android:padding="@dimen/dp_eight"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageViewChangePassword"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:src="@drawable/ic_icon_change_password"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewChangePassword"
+                                android:fontFamily="@font/montserratmedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_margin="@dimen/dp_eight"
+                                android:text="@string/change_password"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_icon_right_arrow"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/dp_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                            android:id="@+id/rlLogout"
+                            android:padding="@dimen/dp_eight"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageViewLogout"
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:src="@drawable/ic_icon_logout"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:maxLines="1"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/imageViewLogout"
+                                android:fontFamily="@font/montserratmedium"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_margin="@dimen/dp_eight"
+                                android:text="@string/logout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:paddingLeft="@dimen/dp_eight"
+                                android:paddingRight="@dimen/dp_sixteen"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_icon_right_arrow"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </LinearLayout>
+</layout>

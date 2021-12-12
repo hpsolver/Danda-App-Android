@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dp_sixteen">16dp</dimen>
+    <dimen name="dp_eight">8dp</dimen>
+    <dimen name="dp_one_eighty">180dp</dimen>
+    <dimen name="dp_thirty_two">32dp</dimen>
+    <dimen name="dp_sixty_four">64dp</dimen>
+    <dimen name="dp_one_twenty">120dp</dimen>
+    <dimen name="dp_hundred">100dp</dimen>
+    <dimen name="sp_sixteen">16sp</dimen>
+    <dimen name="dp_twelve">12dp</dimen>
+    <dimen name="dp_eighty">80dp</dimen>
+    <dimen name="dp_two_fourty">240dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twenty_four">24dp</dimen>
+    <dimen name="dp_ninety_six">96dp</dimen>
+    <dimen name="dp_four">4dp</dimen>
+    <dimen name="dp_one">1dp</dimen>
+    <dimen name="sp_eighteen">18sp</dimen>
+    <dimen name="sp_twenty">24sp</dimen>
+    <dimen name="dp_twenty_four">24dp</dimen>
+    <dimen name="dp_seventy_two">72dp</dimen>
+    <dimen name="dp_fifty_six">56dp</dimen>
+    <dimen name="dp_thirty">30dp</dimen>
+    <dimen name="dp_fourty_eight">48dp</dimen>
+    <dimen name="dp_two_hundred">200dp</dimen>
+    <dimen name="dp_two_eighty">280dp</dimen>
+    <dimen name="dp_two_forty">240dp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_thirteen">13sp</dimen>
+    <dimen name="dp_fourty">40dp</dimen>
+    <dimen name="dp_two">2dp</dimen>
+    <dimen name="sp_twenty_four">24sp</dimen>
+    <dimen name="dp_six">6dp</dimen>
+    <dimen name="three_hundred">300dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_240">240dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_220">220dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_320">320dp</dimen>
+    <dimen name="dp_280">280dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_9">9sp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+</resources>
